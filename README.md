@@ -207,30 +207,28 @@ testbenches confirm stable, reliable, and efficient operation.
 ![image](https://github.com/sagar-c-s/Elevator-Control-System-Optimized-Floor-Selection-Using-Priority-Encoder/blob/main/behavioral_waveform.jpg?raw=true)
 
 ### ***Waveform Data flow design*** ###
-![image]()
+![image](https://github.com/sagar-c-s/Elevator-Control-System-Optimized-Floor-Selection-Using-Priority-Encoder/blob/main/dataflow_waveform.jpg?raw=true)
 
 
-##	***Conclusion*** ##
+##	***Future Scope*** ##
 
-In conclusion, the project successfully designed a 3-bit gray code counter using
-D flip-flops, featuring a synchronous reset. The detailed code implementation is
-provided in this report, a comprehensive discussion about the counter's intended
-behavior is also included. The designed Gray Code Counter efficiently generates the
-cyclic sequence: 000, 001, 011, 010, 110, 111, 101, 100.
-The 3-bit Gray Code Counter holds potential applications and they are widely
-used in rotary encoders to precisely measure rotation, avoiding errors that could arise
-from traditional binary counting methods.
-In simple term a gray code counter is a special type of counter that counts in a
-specific way, it goes up from 000 till 100. These key features collectively contribute to
-the counter's effectiveness and versatility, making it a valuable component for various
-applications that require sequential and cyclic behavior. A detailed code and
-explanation of the same along with the output waveform is included in this report
+The priority encoder–based elevator control system enhances efficiency and adaptability
+by enabling optimized floor selection and reduced waiting times. Future improvements
+include dynamic priority encoding based on traffic patterns, energy-efficient scheduling,
+and predictive maintenance using machine learning. Extending the design to coordinate
+multiple elevators and integrating IoT-based smart building technologies can further
+improve reliability, automation, and overall user experience.
 
 
-##	***References*** ##
 
-1. Javatpoint. Verilog Gray Counter. Retrieved from https:[//www.javatpoint.com/verilog-gray-counter](//www.javatpoint.com/verilog-gray-counter)
+##  References 
 
-2. YouTube. 3-Bit gray code counters circuit diagram. Retrieved from https:[//www.youtube.com/watch?v=gRH_gSrSk8k](//www.youtube.com/watch?v=gRH_gSrSk8k)
+[1] M. D. and V. C. Prakash, “Dynamic dispatching of elevators in elevator group control
+    system with time-based floor preference,” *International Journal of Recent Technology
+    and Engineering (IJRTE)*, vol. 7, no. 5, pp. 195–200, 2019.
 
-3. BrainKart. Synchronous counter design. Retrieved from https:[//www.brainkart.com/article/Design-ofSynchronous-Counters_12975/](//www.brainkart.com/article/Design-ofSynchronous-Counters_12975/)
+[2] A. Shafique, “Generalized elevator control system using SystemVerilog,” GitHub
+    repository.
+     https:[//www.javatpoint.com/verilog-gray-counter](https://github.com/Engineer-Ayesha-Shafique/Generalized-Elevator-Control-System-Using-System-Verilog)
+
+[3] E. O. Tartan and C. Ciflikli, “Sequential decision making for elevator control,” 2023.
