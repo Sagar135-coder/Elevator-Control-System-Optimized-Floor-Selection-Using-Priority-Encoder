@@ -115,40 +115,80 @@ The step-by-step operation of the system is explained below:
 
 ##	***Working of Code*** ##
 
-• D Flip Flop code:
-This module represents D flip-flop module with synchronous reset capability. The
-module has inputs for data (D), reset, and clock (clk), as well as outputs for the flipflop state (Q) and its complement (Qb). It has an always block triggered by either a
-rising clock edge or a rising reset edge, the flip-flop behaves such that when the
-reset signal is active, the outputs Q and Qb are set to 0 and 1 respectively. When
-reset is inactive, the flip-flop captures the input data D on the rising clock edge,
-simultaneously producing Q as D and Qb as the complement of D.
+The elevator control system is implemented as an **8-to-3 priority encoder** and verified
+using **SystemVerilog object-oriented programming (OOP)** concepts. The working of the
+code for each design approach is described below.
 
-• Gray Code Counter Structural Code:
-This Verilog code defines a 3-bit Gray code counter module with synchronous reset
-functionality. It takes input signals for clock (clk) and reset (reset), and outputs a 3-bit
-Gray applications.
+### 1. Gate-Level Design (NOR Gates Only) – OOP Based
 
-• Gray Code Using OOP :
-This System Verilog code defines a package named gray_pkg, wrapping a class
-named GrayCounter to model a 3-bit Gray code counter. The class holds member
-variables for the counter's state (q), clock input (clk), and reset input (reset). The
-constructor initializes the class's members with provided inputs. The update function
-implements the counter's logic by shifting the current state and XORing specific bits
-to generate the Gray code sequence. The getOutput function returns the current
-state when reset is not active, and 0 when reset is asserted. This wrapped class
-provides an organized and reusable way to simulate and work with a 3-bit Gray code
-counter in digital designs.
+- In this approach, the priority encoder logic is implemented using **only NOR gates**,
+  which are functionally universal.
+- A **base class** is defined to represent a generic NOR gate with a virtual `perform()`
+  function.
+- **Derived classes** such as 2-input, 3-input, and 4-input NOR gates override the
+  `perform()` function to implement specific gate behavior.
+- These gate objects are instantiated and interconnected to manually form the complete
+  priority encoder logic.
+- Each floor request input is processed through a network of NOR gates to determine
+  the highest-priority active floor.
+- The encoder outputs a **3-bit binary value** corresponding to the highest requested
+  floor.
+- Verification is performed using an OOP-based testbench with **for-loop driven
+  self-checking**, where all possible input combinations are applied and the output is
+  automatically compared with the expected result.
+- This design provides detailed control over gate-level behavior and closely reflects
+  real hardware implementation.
 
-• Testbench to compare Outputs:
-This System Verilog code defines a package named gray_pkg, encapsulating a
-classnamed GrayCounter to model a 3-bit Gray code counter. The class holds
-member variables for the counter's state (q), clock input (clk), and reset input (reset).
-The constructor initializes the class's members with provided inputs. The update
-function implements the counter's logic by shifting the current state and XORing
-specific bits to generate the Gray code sequence. The getoutput function returns the
-current state when reset is not active, and 0 when reset is asserted. This
-encapsulated classprovides an organized and reusable way to simulate and work
-with a 3-bit Gray codecounter in digital designs.
+---
+
+### 2. Behavioral Design – OOP Based
+
+- In the behavioral approach, the priority encoder logic is described using **high-level
+  SystemVerilog constructs** such as `if-else` and `case` statements.
+- Logical operations such as AND, OR, and NOT are abstracted using **OOP classes**.
+- A **base class** defines a virtual logic operation, while **derived classes** implement
+  specific gate functionality.
+- The priority encoder evaluates all floor request inputs in parallel and applies
+  conditional statements to select the highest-priority active input.
+- The selected floor number is encoded as a **3-bit output**, representing the elevator’s
+  next destination.
+- The OOP-based structure promotes **modularity, reusability, and polymorphism**, making
+  the design easy to extend or modify.
+- Verification is performed using a task-based OOP testbench, where individual test
+  scenarios such as single and multiple floor requests are executed and validated.
+
+---
+
+### 3. Dataflow Design (NAND Gates Only) – OOP Based
+
+- In this approach, the priority encoder is implemented using **Boolean expressions
+  constructed entirely from NAND gates**.
+- A **base NAND gate class** defines a virtual `perform()` function representing NAND
+  behavior.
+- **Derived classes** are created for different input sizes (2-input, 3-input, 4-input
+  NAND gates).
+- Continuous assignments are used to describe the dataflow logic while adhering strictly
+  to NAND-only constraints.
+- The NAND gate objects collectively implement the priority encoder logic that determines
+  the highest active floor request.
+- The output is generated as a **3-bit encoded floor number**.
+- Verification uses an OOP-based self-checking testbench that compares the actual output
+  of the design with expected values for each input condition.
+- This design emphasizes functional abstraction while maintaining gate-level correctness.
+
+---
+
+### 4. Summary
+
+- All three designs implement the same priority encoder functionality but use different
+  modeling techniques.
+- OOP concepts such as **inheritance, polymorphism, abstraction, and encapsulation** are
+  consistently applied across all designs.
+- The gate-level design emphasizes hardware accuracy, the behavioral design improves
+  readability, and the dataflow design balances abstraction with gate-level constraints.
+- Simulation and waveform analysis confirm correct and consistent behavior for all
+  implementations.
+
 
 ##	***Results and Discussion*** ##
 
