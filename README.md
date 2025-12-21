@@ -41,7 +41,7 @@ must be resolved quickly and reliably.
 
 ## ***Design and Implementation***
 ### ***Gate level design diagram*** ###
-![image]<br>
+![image]https://github.com/sagar-c-s/Elevator-Control-System-Optimized-Floor-Selection-Using-Priority-Encoder/blob/main/structural_nor.jpg?raw=true<br>
 
 ### ***Gray Code Counter state diagram*** ###
 ![image](https://github.com/tusharshenoy/3-BIT-Gray-Code-Counter/assets/107348474/db41f326-9b02-43d3-a4e2-869ea23b6a4c)
