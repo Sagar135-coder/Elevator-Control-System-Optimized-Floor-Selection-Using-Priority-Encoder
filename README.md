@@ -44,6 +44,9 @@ must be resolved quickly and reliably.
 ![image](https://github.com/sagar-c-s/Elevator-Control-System-Optimized-Floor-Selection-Using-Priority-Encoder/blob/main/structural_nor.jpg?raw=true)
 
 ### ***Behavioral design diagram *** ###
+![image](https://github.com/sagar-c-s/Elevator-Control-System-Optimized-Floor-Selection-Using-Priority-Encoder/blob/main/Behavioral.jpg?raw=true)
+
+### ***Data flow design diagram *** ###
 ![image]()
 
 ## ***Tech Stack***
