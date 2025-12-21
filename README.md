@@ -204,10 +204,10 @@ testbenches confirm stable, reliable, and efficient operation.
 ![image](https://github.com/sagar-c-s/Elevator-Control-System-Optimized-Floor-Selection-Using-Priority-Encoder/blob/main/gatalevel_waveform.jpg?raw=true)
 
 ### ***Waveform Behavioral design*** ###
-![image](https://github.com/tusharshenoy/3-BIT-Gray-Code-Counter/assets/107348474/12835970-754c-4663-adec-82cda67a865b)
+![image](https://github.com/sagar-c-s/Elevator-Control-System-Optimized-Floor-Selection-Using-Priority-Encoder/blob/main/behavioral_waveform.jpg?raw=true)
 
 ### ***Waveform Data flow design*** ###
-![image](https://github.com/tusharshenoy/3-BIT-Gray-Code-Counter/assets/107348474/12835970-754c-4663-adec-82cda67a865b)
+![image]()
 
 
 ##	***Conclusion*** ##
