@@ -108,7 +108,7 @@ The step-by-step operation of the system is explained below:
 - Simulation results and waveform analysis confirm correct operation across all design styles.
 
 ### ***Excitation Table*** ###
-![image]()
+![image](https://github.com/sagar-c-s/Elevator-Control-System-Optimized-Floor-Selection-Using-Priority-Encoder/blob/main/encoder_8x3_table-850x583.webp?raw=true)
 
 
 <br>
@@ -190,18 +190,23 @@ code for each design approach is described below.
   implementations.
 
 
-##	***Results and Discussion*** ##
+##  Results and Discussion
 
-In this project, a 3-bit Gray Code Counter D flip-flops is executed using Verilog
-code. The counter possesses the ability to count gray code sequence in ascending
-order, and it includesa synchronous reset feature. When the reset signal is activated,
-the counter reliably initializes to the 3-bit zeroes (000).
-The 3-bit gray code counter generates a sequence of: 000, 001, 011, 010, 110, 111,
-101, 100. It updates its count in sync with the clock signal, making sure that everything
-happens at the right time.
-The following waveform can be observed after the execution of the code.
+The 8-to-3 priority encoder–based elevator control system was successfully designed and
+verified using SystemVerilog. The system correctly selects the highest-priority floor when
+multiple requests occur simultaneously and generates the corresponding 3-bit output.
+All three implementations—Gate-Level (NOR), Behavioral, and Dataflow (NAND)—produced
+identical and correct results across all test cases. Simulation waveforms and self-checking
+testbenches confirm stable, reliable, and efficient operation.
 
-### ***Waveform*** ###
+
+### ***Waveform Gate level design*** ###
+![image](https://github.com/tusharshenoy/3-BIT-Gray-Code-Counter/assets/107348474/12835970-754c-4663-adec-82cda67a865b)
+
+### ***Waveform Behavioral design*** ###
+![image](https://github.com/tusharshenoy/3-BIT-Gray-Code-Counter/assets/107348474/12835970-754c-4663-adec-82cda67a865b)
+
+### ***Waveform Data flow design*** ###
 ![image](https://github.com/tusharshenoy/3-BIT-Gray-Code-Counter/assets/107348474/12835970-754c-4663-adec-82cda67a865b)
 
 
