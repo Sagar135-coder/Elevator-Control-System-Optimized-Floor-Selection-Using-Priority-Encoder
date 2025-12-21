@@ -41,10 +41,10 @@ must be resolved quickly and reliably.
 
 ## ***Design and Implementation***
 ### ***Gate level design diagram*** ###
-![image]https://github.com/sagar-c-s/Elevator-Control-System-Optimized-Floor-Selection-Using-Priority-Encoder/blob/main/structural_nor.jpg?raw=true
+![image](https://github.com/sagar-c-s/Elevator-Control-System-Optimized-Floor-Selection-Using-Priority-Encoder/blob/main/structural_nor.jpg?raw=true)
 
-### ***Gray Code Counter state diagram*** ###
-![image](https://github.com/tusharshenoy/3-BIT-Gray-Code-Counter/assets/107348474/db41f326-9b02-43d3-a4e2-869ea23b6a4c)
+### ***Behavioral design diagram *** ###
+![image]()
 
 ## ***Tech Stack***
 [Vivado ML Edition - 2023.1](https://www.xilinx.com/support/download/index.html/content/xilinx/en/downloadNav/vivado-design-tools/2023-1.html) used to implement the code.
